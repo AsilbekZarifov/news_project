@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}Ro'yxattan O'ttingiz {% endblock %}
+{% block content %}
+<h1>{{ new_user.first_name }} tabriklaymiz ro'yxattan o'ttingiz </h1>
+<p>Mufaqqiyatli Ro'yxattan O'ttingiz</p>
+<p>Endi saytga <a href="{% url 'login' %}" class="btn btn-info ml-2">Login</a>qilishiz mumkin </p>
+
+{% endblock content %}

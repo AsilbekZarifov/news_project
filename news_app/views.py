@@ -219,7 +219,9 @@ class NewsDeleteView(DeleteView, OnlyLoggedSuperUser):
 class NewsCreate(OnlyLoggedSuperUser, CreateView):
     model = News
     template_name = 'crud/news_create.html'
-    fields = ('title', 'body', 'image', 'category', 'status', 'slug',)
+    fields = ('title', 'title_uz', 'title_en', 'title_ru',
+              'body', 'body_uz', 'body_en', 'body_ru',
+              'image', 'category', 'status', 'slug',)
 
 @login_required()
 @user_passes_test(lambda u:u.is_superuser) # super user ga faqat kurinadi
